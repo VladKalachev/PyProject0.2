@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -77,14 +78,13 @@ WSGI_APPLICATION = 'job.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'USER': 'vip',
-        #'PASSWORD': 'test',                  # Not used with sqlite3.
-        #'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        #'PORT': '',
+        'NAME': os.path.join(BASE_DIR, 'our_db.sqlite3'),
     }
 }
 
+import dj_database_url
+DATABASE_URL = 'sqlite:///db.sqlite3'
+DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
