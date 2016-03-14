@@ -6,12 +6,14 @@
 </head>
 <body>
 
-    {% include 'nav.html' %}<br>
+    {% extends 'base.html' %}
 
-    <h1>Мой сайт точного времени</h1>
+    {% block title %}Текущее время{% endblock %}
+
+    {% block content %}
     <p>Сейчас {{ current_date }}.</p>
-    <hr>
-    <p>Спасибо, что посетили мой сайт.</p>
+    {% endblock %}
+
 
 </body>
 </html>

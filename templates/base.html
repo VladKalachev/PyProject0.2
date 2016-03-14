@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <hr>
+    <h1>Мой сайт точного времени</h1>
+    <hr>
+    {% block content %}{% endblock %}
+    {% block footer %}
+    <hr>
+    <p>Спасибо, что посетили мой сайт.</p>
+    {% endblock %}
+</body>
+</html>

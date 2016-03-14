@@ -18,6 +18,7 @@ from django.contrib import admin
 
 
 from blog.views import hello
+from blog.views import base
 from blog.views import index
 from blog.views import current_datetime
 
@@ -26,7 +27,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello/$', hello),
     url(r'^index/$', index),
-    url(r'^time/$', current_datetime)
-
+    url(r'^time/$', current_datetime),
+    url(r'^base/$', base),
 ]
 
